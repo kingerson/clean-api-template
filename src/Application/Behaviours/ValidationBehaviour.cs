@@ -23,7 +23,7 @@ public class ValidationBehaviour<TRequest, TResponse> : IPipelineBehavior<TReque
 
             if (failures.Count > 0)
             {
-                throw new SBChallengeException(
+                throw new MsCleanException(
                     $"Command Validation Errors for type {typeof(TRequest).Name}", new ValidationException("Validation exception", failures));
             }
         }

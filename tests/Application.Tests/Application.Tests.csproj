@@ -38,10 +38,4 @@
     <ProjectReference Include="..\..\src\Application\Application.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <None Update="Source\GovernmentEntities.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-
 </Project>

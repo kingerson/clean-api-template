@@ -20,16 +20,16 @@ public static class ApplicationBuilderExtensions
                 var statusCode = contextFeature.Error switch
                 {
                     ValidationException ex => HttpStatusCode.BadRequest,
-                    SBChallengeException ex => HttpStatusCode.BadRequest,
+                    MsCleanException ex => HttpStatusCode.BadRequest,
                     _ => HttpStatusCode.InternalServerError
                 };
 
                 var apiError = new ApiError([contextFeature.Error.Message], contextFeature.Error.InnerException?.Message, contextFeature.Error.StackTrace);
 
-                if (contextFeature.Error.GetType() == typeof(SBChallengeException))
+                if (contextFeature.Error.GetType() == typeof(MsCleanException))
                 {
                     var innerException = contextFeature.Error.InnerException as FluentValidation.ValidationException;
-                    var providerException = (SBChallengeException)contextFeature.Error;
+                    var providerException = (MsCleanException)contextFeature.Error;
                     if (innerException is not null)
                     {
                         var errors = ((FluentValidation.ValidationException)contextFeature.Error.InnerException).Errors.Select(x => x.ErrorMessage).ToArray();

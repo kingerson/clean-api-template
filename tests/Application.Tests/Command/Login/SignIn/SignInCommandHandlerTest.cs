@@ -26,7 +26,10 @@ public class SignInCommandHandlerTest
     public async Task Handle_ShouldGenerateValidJwtToken()
     {
         // Arrange
-        var command = new SignInCommand();
+        var command = new SignInCommand
+        {
+            UserName = "gnavarro"
+        };
         var cancellationToken = CancellationToken.None;
 
         // Act
@@ -43,7 +46,7 @@ public class SignInCommandHandlerTest
         jwtToken.Audiences.Should().Contain("TestAudience");
 
         jwtToken.Claims.Should().ContainSingle(c => c.Type == "rol" && c.Value == "admin");
-        jwtToken.Claims.Should().ContainSingle(c => c.Type == "name" && c.Value == "gnvarro");
+        jwtToken.Claims.Should().ContainSingle(c => c.Type == "username" && c.Value == "gnavarro");
     }
 
     [Fact]

@@ -35,7 +35,7 @@ public class RegisterPersonCommandHandler : IRequestHandler<RegisterPersonComman
                 catch (Exception ex)
                 {
                     await transaction.RollbackAsync();
-                    throw new SBChallengeException($"Database Error : {ex.Message}");
+                    throw new MsCleanException($"Database Error : {ex.Message}");
                 }
             }
         });

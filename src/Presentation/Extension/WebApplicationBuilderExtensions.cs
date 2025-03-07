@@ -94,7 +94,7 @@ public static class WebApplicationBuilderExtensions
                 {
                     Version = "v1",
                     Title = $"MsClean API - {ti.ToTitleCase(builder.Environment.EnvironmentName)}",
-                    Description = "Crud of Government Entities using Net 8",
+                    Description = "Template Net 8",
                     Contact = new OpenApiContact
                     {
                         Name = "Gerson Navarro",

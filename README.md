@@ -1,7 +1,3 @@
-## Create Project
-The project was created using my nugget package (https://www.nuget.org/packages/MsClean.Template/)
-
-
 ## How to Run Project
 
 There are multiple ways to run this project using two pre-configured environments `local` and `docker`.  The `appsettings.json` files are configured to run the projects in different ways and connect different application logging mechanisms.

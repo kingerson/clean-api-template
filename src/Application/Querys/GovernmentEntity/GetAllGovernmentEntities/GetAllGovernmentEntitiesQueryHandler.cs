@@ -21,7 +21,7 @@ public class GetAllGovernmentEntitiesQueryHandler : IRequestHandler<GetAllGovern
     {
 
         if (!File.Exists(_sourcePlaint))
-            throw new SBChallengeException(BusinessExceptionMessages.FileNotFound);
+            throw new MsCleanException(BusinessExceptionMessages.FileNotFound);
 
         var sourceData = await File.ReadAllTextAsync(_sourcePlaint, cancellationToken);
 

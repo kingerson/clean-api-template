@@ -16,7 +16,7 @@ public class UpdatePersonCommandHandler : IRequestHandler<UpdatePersonCommand, b
         var person = await _unitOfWork.Repository<Person>().GetById(request.Id);
 
         if (person is null)
-            throw new SBChallengeException($"Person with id : {request.Id} not found");
+            throw new MsCleanException($"Person with id : {request.Id} not found");
 
         person.Update(request.LastName, request.Email);
 
@@ -35,7 +35,7 @@ public class UpdatePersonCommandHandler : IRequestHandler<UpdatePersonCommand, b
                 catch (Exception ex)
                 {
                     await transaction.RollbackAsync();
-                    throw new SBChallengeException($"Database Error : {ex.Message}");
+                    throw new MsCleanException($"Database Error : {ex.Message}");
                 }
             }
         });

@@ -1,36 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gnava\\Desktop\\MsClean\\MsClean\\src\\Presentation\\Presentation.csproj": {}
+    "/Users/gnavarro/Documents/Development/clean-api-template/src/Presentation/Presentation.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gnava\\Desktop\\MsClean\\MsClean\\src\\Application\\Application.csproj": {
+    "/Users/gnavarro/Documents/Development/clean-api-template/src/Application/Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gnava\\Desktop\\MsClean\\MsClean\\src\\Application\\Application.csproj",
+        "projectUniqueName": "/Users/gnavarro/Documents/Development/clean-api-template/src/Application/Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\gnava\\Desktop\\MsClean\\MsClean\\src\\Application\\Application.csproj",
-        "packagesPath": "C:\\Users\\gnava\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gnava\\Desktop\\MsClean\\MsClean\\src\\Application\\obj\\",
+        "projectPath": "/Users/gnavarro/Documents/Development/clean-api-template/src/Application/Application.csproj",
+        "packagesPath": "/Users/gnavarro/.nuget/packages/",
+        "outputPath": "/Users/gnavarro/Documents/Development/clean-api-template/src/Application/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages",
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\gnava\\Desktop\\MsClean\\MsClean\\NuGet.Config",
-          "C:\\Users\\gnava\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 24.1.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/gnavarro/Documents/Development/clean-api-template/NuGet.Config",
+          "/Users/gnavarro/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\DevExpress 24.1\\Components\\System\\Components\\Packages": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -38,11 +28,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\gnava\\Desktop\\MsClean\\MsClean\\src\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\gnava\\Desktop\\MsClean\\MsClean\\src\\Domain\\Domain.csproj"
+              "/Users/gnavarro/Documents/Development/clean-api-template/src/Domain/Domain.csproj": {
+                "projectPath": "/Users/gnavarro/Documents/Development/clean-api-template/src/Domain/Domain.csproj"
               },
-              "C:\\Users\\gnava\\Desktop\\MsClean\\MsClean\\src\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\gnava\\Desktop\\MsClean\\MsClean\\src\\Infrastructure\\Infrastructure.csproj"
+              "/Users/gnavarro/Documents/Development/clean-api-template/src/Infrastructure/Infrastructure.csproj": {
+                "projectPath": "/Users/gnavarro/Documents/Development/clean-api-template/src/Infrastructure/Infrastructure.csproj"
               }
             }
           }
@@ -107,37 +97,27 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.309/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\gnava\\Desktop\\MsClean\\MsClean\\src\\Domain\\Domain.csproj": {
+    "/Users/gnavarro/Documents/Development/clean-api-template/src/Domain/Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gnava\\Desktop\\MsClean\\MsClean\\src\\Domain\\Domain.csproj",
+        "projectUniqueName": "/Users/gnavarro/Documents/Development/clean-api-template/src/Domain/Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\gnava\\Desktop\\MsClean\\MsClean\\src\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\gnava\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gnava\\Desktop\\MsClean\\MsClean\\src\\Domain\\obj\\",
+        "projectPath": "/Users/gnavarro/Documents/Development/clean-api-template/src/Domain/Domain.csproj",
+        "packagesPath": "/Users/gnavarro/.nuget/packages/",
+        "outputPath": "/Users/gnavarro/Documents/Development/clean-api-template/src/Domain/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages",
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\gnava\\Desktop\\MsClean\\MsClean\\NuGet.Config",
-          "C:\\Users\\gnava\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 24.1.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/gnavarro/Documents/Development/clean-api-template/NuGet.Config",
+          "/Users/gnavarro/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\DevExpress 24.1\\Components\\System\\Components\\Packages": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -177,37 +157,27 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.309/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\gnava\\Desktop\\MsClean\\MsClean\\src\\Infrastructure\\Infrastructure.csproj": {
+    "/Users/gnavarro/Documents/Development/clean-api-template/src/Infrastructure/Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gnava\\Desktop\\MsClean\\MsClean\\src\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "/Users/gnavarro/Documents/Development/clean-api-template/src/Infrastructure/Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\gnava\\Desktop\\MsClean\\MsClean\\src\\Infrastructure\\Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\gnava\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gnava\\Desktop\\MsClean\\MsClean\\src\\Infrastructure\\obj\\",
+        "projectPath": "/Users/gnavarro/Documents/Development/clean-api-template/src/Infrastructure/Infrastructure.csproj",
+        "packagesPath": "/Users/gnavarro/.nuget/packages/",
+        "outputPath": "/Users/gnavarro/Documents/Development/clean-api-template/src/Infrastructure/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages",
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\gnava\\Desktop\\MsClean\\MsClean\\NuGet.Config",
-          "C:\\Users\\gnava\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 24.1.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/gnavarro/Documents/Development/clean-api-template/NuGet.Config",
+          "/Users/gnavarro/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\DevExpress 24.1\\Components\\System\\Components\\Packages": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -215,8 +185,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\gnava\\Desktop\\MsClean\\MsClean\\src\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\gnava\\Desktop\\MsClean\\MsClean\\src\\Domain\\Domain.csproj"
+              "/Users/gnavarro/Documents/Development/clean-api-template/src/Domain/Domain.csproj": {
+                "projectPath": "/Users/gnavarro/Documents/Development/clean-api-template/src/Domain/Domain.csproj"
               }
             }
           }
@@ -309,37 +279,27 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.309/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\gnava\\Desktop\\MsClean\\MsClean\\src\\Presentation\\Presentation.csproj": {
+    "/Users/gnavarro/Documents/Development/clean-api-template/src/Presentation/Presentation.csproj": {
       "version": "1.1.1",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gnava\\Desktop\\MsClean\\MsClean\\src\\Presentation\\Presentation.csproj",
+        "projectUniqueName": "/Users/gnavarro/Documents/Development/clean-api-template/src/Presentation/Presentation.csproj",
         "projectName": "Presentation",
-        "projectPath": "C:\\Users\\gnava\\Desktop\\MsClean\\MsClean\\src\\Presentation\\Presentation.csproj",
-        "packagesPath": "C:\\Users\\gnava\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gnava\\Desktop\\MsClean\\MsClean\\src\\Presentation\\obj\\",
+        "projectPath": "/Users/gnavarro/Documents/Development/clean-api-template/src/Presentation/Presentation.csproj",
+        "packagesPath": "/Users/gnavarro/.nuget/packages/",
+        "outputPath": "/Users/gnavarro/Documents/Development/clean-api-template/src/Presentation/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages",
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\gnava\\Desktop\\MsClean\\MsClean\\NuGet.Config",
-          "C:\\Users\\gnava\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 24.1.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/gnavarro/Documents/Development/clean-api-template/NuGet.Config",
+          "/Users/gnavarro/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\DevExpress 24.1\\Components\\System\\Components\\Packages": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -347,11 +307,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\gnava\\Desktop\\MsClean\\MsClean\\src\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\gnava\\Desktop\\MsClean\\MsClean\\src\\Application\\Application.csproj"
+              "/Users/gnavarro/Documents/Development/clean-api-template/src/Application/Application.csproj": {
+                "projectPath": "/Users/gnavarro/Documents/Development/clean-api-template/src/Application/Application.csproj"
               },
-              "C:\\Users\\gnava\\Desktop\\MsClean\\MsClean\\src\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\gnava\\Desktop\\MsClean\\MsClean\\src\\Infrastructure\\Infrastructure.csproj"
+              "/Users/gnavarro/Documents/Development/clean-api-template/src/Infrastructure/Infrastructure.csproj": {
+                "projectPath": "/Users/gnavarro/Documents/Development/clean-api-template/src/Infrastructure/Infrastructure.csproj"
               }
             }
           }
@@ -431,7 +391,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.309/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -21,11 +21,11 @@ public class GetGovernmentEntityByIdQueryHandler : IRequestHandler<GetGovernment
     public async Task<GovernmentEntityViewModel> Handle(GetGovernmentEntityByIdQuery request, CancellationToken cancellationToken)
     {
         if (!File.Exists(_sourcePlaint))
-            throw new SBChallengeException(BusinessExceptionMessages.FileNotFound);
+            throw new MsCleanException(BusinessExceptionMessages.FileNotFound);
 
         var sourceData = await File.ReadAllTextAsync(_sourcePlaint, cancellationToken);
 
-        var governmentEntityData = JsonConvert.DeserializeObject<IEnumerable<GovernmentEntityViewModel>>(sourceData).FirstOrDefault(m => m.Id == request.Id) ?? throw new SBChallengeException(BusinessExceptionMessages.RegisterWithIdNotExist);
+        var governmentEntityData = JsonConvert.DeserializeObject<IEnumerable<GovernmentEntityViewModel>>(sourceData).FirstOrDefault(m => m.Id == request.Id) ?? throw new MsCleanException(BusinessExceptionMessages.RegisterWithIdNotExist);
 
         return governmentEntityData;
     }

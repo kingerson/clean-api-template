@@ -24,8 +24,8 @@ public class SignInCommandHandler : IRequestHandler<SignInCommand, string>
                 audience: _configuration["JwtSecurityToken:Audience"],
                 claims:
                 [
-                        new Claim("rol", "admin"),
-                        new Claim("name", "gnvarro"),
+                        new Claim("username", request.UserName),
+                        new Claim("rol", "admin")
                 ],
                 expires: DateTime.Now.AddMinutes(30),
                 signingCredentials: signinCredentials
