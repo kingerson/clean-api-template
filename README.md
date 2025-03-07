@@ -1,6 +1,3 @@
-# SB Challenge
-Crud of Government Entity
-
 ## Create Project
 The project was created using my nugget package (https://www.nuget.org/packages/MsClean.Template/)
 
