@@ -1,0 +1,6 @@
+[
+  { "Id": "7db3d37a-9a59-4cda-a9e1-186bef04cd2b", "Name": "Ministerio de Agricultura", "IsActive": true },
+  { "Id": "ea3d09f5-923d-4d44-a8b8-8bc3f3bb09c4", "Name": "Ministerio de Economia", "IsActive": true },
+  { "Id": "9152b8a4-5e68-4341-9224-92d097b59361", "Name": "Ministerio de Salud y Trabajo", "IsActive": true },
+  { "Id": "6a042771-a390-4c32-810b-4e50850846f5", "Name": "Ministerio de Educacion", "IsActive": true }
+]

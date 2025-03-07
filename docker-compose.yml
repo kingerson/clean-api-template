@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+    api:
+      build:
+        context: .
+        target: run
+        args:
+          VERSION_PREFIX: 1.0.0.0
+          VERSION_SUFFIX: docker
+      ports:
+          - "8080:80"
+      environment:
+        DOTNET_ENVIRONMENT: docker
