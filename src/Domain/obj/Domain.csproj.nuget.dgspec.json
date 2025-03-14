@@ -1,26 +1,36 @@
 {
   "format": 1,
   "restore": {
-    "/Users/gnavarro/Documents/Development/clean-api-template/src/Domain/Domain.csproj": {}
+    "C:\\Gerson\\Projects\\challenge\\clean-api-template\\src\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "/Users/gnavarro/Documents/Development/clean-api-template/src/Domain/Domain.csproj": {
+    "C:\\Gerson\\Projects\\challenge\\clean-api-template\\src\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/gnavarro/Documents/Development/clean-api-template/src/Domain/Domain.csproj",
+        "projectUniqueName": "C:\\Gerson\\Projects\\challenge\\clean-api-template\\src\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "/Users/gnavarro/Documents/Development/clean-api-template/src/Domain/Domain.csproj",
-        "packagesPath": "/Users/gnavarro/.nuget/packages/",
-        "outputPath": "/Users/gnavarro/Documents/Development/clean-api-template/src/Domain/obj/",
+        "projectPath": "C:\\Gerson\\Projects\\challenge\\clean-api-template\\src\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\gnava\\.nuget\\packages\\",
+        "outputPath": "C:\\Gerson\\Projects\\challenge\\clean-api-template\\src\\Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages",
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/gnavarro/Documents/Development/clean-api-template/NuGet.Config",
-          "/Users/gnavarro/.nuget/NuGet/NuGet.Config"
+          "C:\\Gerson\\Projects\\challenge\\clean-api-template\\NuGet.Config",
+          "C:\\Users\\gnava\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 24.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\DevExpress 24.1\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -60,7 +70,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.309/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

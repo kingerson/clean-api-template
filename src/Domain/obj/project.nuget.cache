@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KrU6Pj8O904=",
+  "dgSpecHash": "TweBd+cqbcI=",
   "success": true,
-  "projectFilePath": "/Users/gnavarro/Documents/Development/clean-api-template/src/Domain/Domain.csproj",
+  "projectFilePath": "C:\\Gerson\\Projects\\challenge\\clean-api-template\\src\\Domain\\Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
