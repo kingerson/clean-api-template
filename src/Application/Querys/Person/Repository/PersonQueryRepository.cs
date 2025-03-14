@@ -5,8 +5,8 @@ using System.Data;
 using System.Threading;
 using System.Threading.Tasks;
 using Dapper;
+using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
-using MySql.Data.MySqlClient;
 
 public class PersonQueryRepository : IPersonQueryRepository
 {
@@ -15,17 +15,17 @@ public class PersonQueryRepository : IPersonQueryRepository
     public PersonQueryRepository(IConfiguration configuration)
     {
         _configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
-        _connectionString = _configuration["ConnectionStrings:ConnectionEntity"];
+        _connectionString = _configuration["ConnectionStrings:DefaultConnection"];
     }
 
     public async Task<IEnumerable<PersonViewModel>> GetAll(CancellationToken cancellationToken)
     {
         IEnumerable<PersonViewModel> result;
 
-        using (var connection = new MySqlConnection(_connectionString))
+        using (var connection = new SqlConnection(_connectionString))
         {
             await connection.OpenAsync(cancellationToken);
-            result = await connection.QueryAsync<PersonViewModel>("sp_get_person", commandType: CommandType.StoredProcedure);
+            result = await connection.QueryAsync<PersonViewModel>("SELECT * FROM [dbo].[Person]", commandType: CommandType.Text);
         }
 
         return result;
@@ -38,7 +38,7 @@ public class PersonQueryRepository : IPersonQueryRepository
         var parameters = new DynamicParameters();
         parameters.Add("@Id", request.Id);
 
-        using (var connection = new MySqlConnection(_connectionString))
+        using (var connection = new SqlConnection(_connectionString))
         {
             await connection.OpenAsync(cancellationToken);
             result = await connection.QueryFirstOrDefaultAsync<PersonViewModel>("sp_get_person_by_id", parameters, commandType: CommandType.StoredProcedure);

@@ -15,6 +15,7 @@ public static class DatabaseMigrationExtension
                 var context = services.GetRequiredService<ApplicationDbContext>();
                 context.Database.EnsureCreated(); 
                 context.Database.Migrate();
+                SeedData(context);
             }
             catch (Exception ex)
             {
@@ -24,4 +25,25 @@ public static class DatabaseMigrationExtension
 
         return app;
     }
+
+    private static void SeedData(ApplicationDbContext dbContext)
+    {
+        if (!dbContext.PermissionTypes.Any())
+        {
+            dbContext.PermissionTypes.AddRange([
+                    new("Admin"){
+                        UserRegister = "admin",
+                        DateTimeRegister = DateTime.UtcNow,
+                        IsActive = true
+                    },
+                    new("User"){
+                        UserRegister = "admin",
+                        DateTimeRegister = DateTime.UtcNow,
+                        IsActive = true
+                    }
+            ]);
+            dbContext.SaveChanges();
+        }
+    }
+
 }

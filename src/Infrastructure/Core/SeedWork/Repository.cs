@@ -63,7 +63,7 @@ public class Repository<T> : IRepository<T> where T : Entity
     }
 
 
-    public async Task<T?> GetById(Guid id) => await _context.Set<T>().FindAsync(id);
+    public async Task<T?> GetById(int id) => await _context.Set<T>().FindAsync(id);
 
     public async Task<T> Add(T entity) => (await _context.Set<T>().AddAsync(entity)).Entity;
 

@@ -121,13 +121,13 @@
     <value>El email no puede ser nulo o vacio.</value>
   </data>
   <data name="IdCannotBeNullOrEmpty" xml:space="preserve">
-    <value>El identificador no puede ser nulo o vacio.</value>
+    <value>Indetifier cannot be null or empty</value>
   </data>
   <data name="LastNameCannotBeNullOrEmpty" xml:space="preserve">
-    <value>El apellido no puede ser nulo o vacio.</value>
+    <value>Last Name cannot be null or empty</value>
   </data>
   <data name="NameCannotBeNullOrEmpty" xml:space="preserve">
-    <value>El nombre no puede ser nulo o vacio.</value>
+    <value>Name cannot be null or empty</value>
   </data>
   <data name="PropertyCannotBeNullOrEmpty" xml:space="preserve">
     <value>La propiedad '{PropertyName}' no puede ser nula o vacio</value>
@@ -137,5 +137,8 @@
   </data>
   <data name="RegisterWithIdNotExist" xml:space="preserve">
     <value>El registro no existe.</value>
+  </data>
+  <data name="PermissionTypeCannotBeNullOrEmpty" xml:space="preserve">
+    <value>PermissionType cannot be null or empty</value>
   </data>
 </root>

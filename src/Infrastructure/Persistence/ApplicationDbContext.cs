@@ -28,9 +28,6 @@ public class ApplicationDbContext : DbContext
             var configuration = new ConfigurationBuilder()
                                     .SetBasePath(Path.GetDirectoryName(configurationPath)!).AddJsonFile(configurationPath).Build();
                                     
-            // var configuration = new ConfigurationBuilder()
-            //     .SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile(@Directory.GetCurrentDirectory() + "/../Presentation/appsettings.json").Build();
-
             var connectionString = configuration.GetConnectionString("DefaultConnection");
 
             DbContextOptionsBuilder<ApplicationDbContext> builder = new();
@@ -41,8 +38,6 @@ public class ApplicationDbContext : DbContext
             return new ApplicationDbContext(builder.Options, configuration, new EntityInterceptor());
         }
     }
-
-    public DbSet<Person> Persons { get; set; }
     public DbSet<Permission> Permissions { get; set; }
     public DbSet<PermissionType> PermissionTypes { get; set; }
 
@@ -58,11 +53,6 @@ public class ApplicationDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        #region Persona
-
-        modelBuilder.ApplyConfiguration(new PersonConfiguration());
-        #endregion
-
         modelBuilder.ApplyConfiguration(new PermissionConfiguration());
         modelBuilder.ApplyConfiguration(new PermissionTypeConfiguration());
 

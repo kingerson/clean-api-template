@@ -79,7 +79,7 @@ namespace MsClean.Application {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to El identificador no puede ser nulo o vacio..
+        ///   Looks up a localized string similar to Indetifier cannot be null or empty.
         /// </summary>
         public static string IdCannotBeNullOrEmpty {
             get {
@@ -88,7 +88,7 @@ namespace MsClean.Application {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to El apellido no puede ser nulo o vacio..
+        ///   Looks up a localized string similar to Last Name cannot be null or empty.
         /// </summary>
         public static string LastNameCannotBeNullOrEmpty {
             get {
@@ -97,11 +97,20 @@ namespace MsClean.Application {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to El nombre no puede ser nulo o vacio..
+        ///   Looks up a localized string similar to Name cannot be null or empty.
         /// </summary>
         public static string NameCannotBeNullOrEmpty {
             get {
                 return ResourceManager.GetString("NameCannotBeNullOrEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PermissionType cannot be null or empty.
+        /// </summary>
+        public static string PermissionTypeCannotBeNullOrEmpty {
+            get {
+                return ResourceManager.GetString("PermissionTypeCannotBeNullOrEmpty", resourceCulture);
             }
         }
         

@@ -25,6 +25,8 @@ public static class DependencyInjection
         _ = services.AddScoped<IMemoryCacheService, MemoryCacheService>();
         _ = services.AddScoped<IHttpService, HttpService>();
         _ = services.AddScoped<IExecutionStrategyWrapper, ExecutionStrategyWrapper>();
+        _ = services.AddScoped<IKakfaService, KakfaService>();
+        _ = services.AddScoped(typeof(IElasticSearchService<>), typeof(ElasticSearchService<>));
 
         return services;
     }

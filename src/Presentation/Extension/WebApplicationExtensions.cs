@@ -2,9 +2,11 @@ namespace MsClean.Presentation.Extensions;
 
 using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
+using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using MsClean.Application;
-using Serilog;
+using MsClean.Presentation.Extension;
 
 [ExcludeFromCodeCoverage]
 public static class WebApplicationExtensions
@@ -19,7 +21,8 @@ public static class WebApplicationExtensions
 
         #region Logging
 
-        _ = app.UseSerilogRequestLogging();
+        //_ = app.UseSerilogRequestLogging();
+        _ = app.UseMiddleware<RequestLoggingMiddleware>();
 
         #endregion Logging
 
@@ -46,6 +49,14 @@ public static class WebApplicationExtensions
                 $"MsClean - {ti.ToTitleCase(app.Environment.EnvironmentName)} - V1"));
 
         #endregion Swagger
+
+
+        #region Health
+        _ = app.MapHealthChecks("health", new HealthCheckOptions
+        {
+            ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+        });
+        #endregion
 
         #region Cors
         _ = app.UseCors(builder => builder

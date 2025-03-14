@@ -17,6 +17,8 @@ public static class DependencyInjection
         _ = services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
         _ = services.AddTransient<IPersonQueryRepository, PersonQueryRepository>();
+        _ = services.AddTransient<IPermissionRepository, PermissionRepository>();
+
         return services;
     }
 }
