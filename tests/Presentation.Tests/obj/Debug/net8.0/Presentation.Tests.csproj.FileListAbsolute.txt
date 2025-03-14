@@ -208,7 +208,6 @@ C:/Users/gnava/Desktop/MsClean/MsClean/tests/Presentation.Tests/obj/Debug/net8.0
 /Users/gnavarro/Documents/Development/clean-api-template/tests/Presentation.Tests/bin/Debug/net8.0/xunit.runner.visualstudio.testadapter.dll
 /Users/gnavarro/Documents/Development/clean-api-template/tests/Presentation.Tests/bin/Debug/net8.0/xunit.runner.reporters.netcoreapp10.dll
 /Users/gnavarro/Documents/Development/clean-api-template/tests/Presentation.Tests/bin/Debug/net8.0/xunit.runner.utility.netcoreapp10.dll
-/Users/gnavarro/Documents/Development/clean-api-template/tests/Presentation.Tests/bin/Debug/net8.0/Source/GovernmentEntities.txt
 /Users/gnavarro/Documents/Development/clean-api-template/tests/Presentation.Tests/bin/Debug/net8.0/Presentation.Tests.deps.json
 /Users/gnavarro/Documents/Development/clean-api-template/tests/Presentation.Tests/bin/Debug/net8.0/Presentation.Tests.runtimeconfig.json
 /Users/gnavarro/Documents/Development/clean-api-template/tests/Presentation.Tests/bin/Debug/net8.0/Presentation.Tests.dll

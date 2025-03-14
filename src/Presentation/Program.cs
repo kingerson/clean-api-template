@@ -7,6 +7,7 @@ var builder = WebApplication
 var app = builder
     .Build()
     .ConfigureApplication();
+    // .ApplyMigrations();
 
 await app.RunAsync();
 

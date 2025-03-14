@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using MsClean.Domain;
 
-public class PersonConfigurarion : EntityMapBase<Person>
+public class PersonConfiguration : EntityMapBase<Person>
 {
     protected override void Configure(EntityTypeBuilder<Person> builder)
     {

@@ -11,21 +11,20 @@ public class ApplicationDbContext : DbContext
     public ApplicationDbContext(
         DbContextOptions<ApplicationDbContext> options,
         EntityInterceptor entityInterceptor
-        ) : base(options)
-    {
-        _entityInterceptor = entityInterceptor ?? throw new ArgumentNullException(nameof(entityInterceptor));
-    }
+        ) : base(options) => _entityInterceptor = entityInterceptor ?? throw new ArgumentNullException(nameof(entityInterceptor));
 
     public class DesignTimeDbContextFactory : IDesignTimeDbContextFactory<ApplicationDbContext>
     {
         public ApplicationDbContext CreateDbContext(string[] args)
         {
-            IConfigurationRoot configuration = new ConfigurationBuilder()
+            var configuration = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile(@Directory.GetCurrentDirectory() + "/../Presentation/appsettings.json").Build();
 
-            var databaseConnections = configuration.GetConnectionString("ConnectionEntity");
+            var connectionString = configuration.GetConnectionString("DefaultConnection");
+
+            Console.WriteLine($"Connection String: {connectionString}");
             DbContextOptionsBuilder<ApplicationDbContext> builder = new();
-            builder.UseMySQL(databaseConnections)
+            builder.UseSqlServer(connectionString)
                 .EnableDetailedErrors()
                 .AddInterceptors(new EntityInterceptor());
             return new ApplicationDbContext(builder.Options, new EntityInterceptor());
@@ -33,6 +32,8 @@ public class ApplicationDbContext : DbContext
     }
 
     public DbSet<Person> Persons { get; set; }
+    public DbSet<Permission> Permissions { get; set; }
+    public DbSet<PermissionType> PermissionTypes { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
@@ -44,8 +45,11 @@ public class ApplicationDbContext : DbContext
     {
         #region Persona
 
-        modelBuilder.ApplyConfiguration(new PersonConfigurarion());
+        modelBuilder.ApplyConfiguration(new PersonConfiguration());
         #endregion
+
+        modelBuilder.ApplyConfiguration(new PermissionConfiguration());
+        modelBuilder.ApplyConfiguration(new PermissionTypeConfiguration());
 
         base.OnModelCreating(modelBuilder);
     }

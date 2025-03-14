@@ -27,7 +27,7 @@ public class PersonControllerTest
         // Arrange
         var query = new GetAllPersonQuery();
         var cancelationToken = new CancellationToken();
-        var response = new List<PersonViewModel> { new PersonViewModel { Name = "Gerson", LastName = "Navarro", Email = "g.navarrope@gmail.com" } };
+        var response = new List<PersonViewModel> { new() { Name = "Gerson", LastName = "Navarro", Email = "g.navarrope@gmail.com" } };
 
         _mediatorMock.Setup(x => x.Send(query, cancelationToken)).ReturnsAsync(response);
 
@@ -64,13 +64,13 @@ public class PersonControllerTest
     public async Task CreatePerson_ShouldReturn_Created()
     {
         // Arrange
-        var id = Guid.NewGuid();
+        var id = It.IsAny<int>();
 
         var command = new RegisterPersonCommand
         {
-            Name = "Angel",
-            LastName = "Hinostroza",
-            Email = "tromepop@gmail.com"
+            Name = "Gerson",
+            LastName = "Navarro",
+            Email = "g.navarrope@gmail.com"
         };
 
         var cancelationToken = new CancellationToken();
@@ -95,8 +95,8 @@ public class PersonControllerTest
         var command = new UpdatePersonCommand
         {
             Id = id,
-            LastName = "Hinostroza Update",
-            Email = "tromepop@gmail.com"
+            LastName = "Eduardo Update",
+            Email = "e.navarro@gmail.com"
         };
 
         var cancelationToken = new CancellationToken();

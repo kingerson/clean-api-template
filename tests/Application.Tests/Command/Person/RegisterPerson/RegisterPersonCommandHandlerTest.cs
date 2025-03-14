@@ -26,7 +26,7 @@ public class RegisterPersonCommandHandlerTest
         _personRepositoryMock = new Mock<IRepository<Person>>();
         _transactionMock = new Mock<IDbContextTransaction>();
 
-        _personRepositoryMock.Setup(u => u.Add(It.IsAny<Person>())).Callback<Person>(p => p.Id = Guid.NewGuid());
+        _personRepositoryMock.Setup(u => u.Add(It.IsAny<Person>())).Callback<Person>(p => p.Id = It.IsInRange(1, 10, Moq.Range.Inclusive)).ReturnsAsync((Person p) => { p.Id = 1; return p; });
 
         _unitOfWorkMock.Setup(u => u.Repository<Person>()).Returns(_personRepositoryMock.Object);
         _unitOfWorkMock.Setup(u => u.BeginTransactionAsync()).ReturnsAsync(_transactionMock.Object);
@@ -55,7 +55,7 @@ public class RegisterPersonCommandHandlerTest
         var result = await _handler.Handle(command, cancellationToken);
 
         // Assert
-        result.Should().NotBeEmpty();
+        result.Should().BeGreaterThan(0);
 
         _personRepositoryMock.Verify(r => r.Add(It.IsAny<Person>()), Times.Once);
         _unitOfWorkMock.Verify(u => u.SaveEntitiesAsync(cancellationToken), Times.Once);

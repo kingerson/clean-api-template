@@ -121,7 +121,6 @@ C:/Users/gnava/Desktop/MsClean/MsClean/src/Presentation/obj/Debug/net8.0/ref/Pre
 /Users/gnavarro/Documents/Development/clean-api-template/src/Presentation/bin/Debug/net8.0/appsettings.json
 /Users/gnavarro/Documents/Development/clean-api-template/src/Presentation/bin/Debug/net8.0/appsettings.local.json
 /Users/gnavarro/Documents/Development/clean-api-template/src/Presentation/bin/Debug/net8.0/Presentation
-/Users/gnavarro/Documents/Development/clean-api-template/src/Presentation/bin/Debug/net8.0/Source/GovernmentEntities.txt
 /Users/gnavarro/Documents/Development/clean-api-template/src/Presentation/bin/Debug/net8.0/Presentation.deps.json
 /Users/gnavarro/Documents/Development/clean-api-template/src/Presentation/bin/Debug/net8.0/Presentation.runtimeconfig.json
 /Users/gnavarro/Documents/Development/clean-api-template/src/Presentation/bin/Debug/net8.0/Presentation.dll

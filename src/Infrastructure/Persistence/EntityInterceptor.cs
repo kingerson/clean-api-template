@@ -19,19 +19,24 @@ public class EntityInterceptor : SaveChangesInterceptor
 
         foreach (var entry in context.ChangeTracker.Entries<Entity>())
         {
-            var usuarioConectado = "user";
+            var user = "user";
 
             switch (entry.State)
             {
                 case EntityState.Added:
                     entry.Entity.DateTimeRegister = DateTime.Now;
-                    entry.Entity.UserRegister = usuarioConectado;
+                    entry.Entity.UserRegister = user;
                     entry.Entity.IsActive = true;
                     break;
-                case EntityState.Modified & EntityState.Detached & EntityState.Unchanged & EntityState.Deleted:
+
+                case EntityState.Modified:
+                case EntityState.Detached:
+                case EntityState.Unchanged:
+                case EntityState.Deleted:
                     entry.Entity.DateTimeUpdated = DateTime.Now;
-                    entry.Entity.UserUpdated = usuarioConectado;
+                    entry.Entity.UserUpdated = user;
                     break;
+
                 default:
                     break;
             }

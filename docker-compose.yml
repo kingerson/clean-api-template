@@ -1,6 +1,21 @@
-version: "3.9"
 services:
+    sqlserver:
+      image: "mcr.microsoft.com/azure-sql-edge"
+      container_name: sqlserver
+      ports:
+        - "1433:1433"
+      environment:
+        SA_PASSWORD: "Facil123."
+        ACCEPT_EULA: "Y"
+      # healthcheck:
+      #   test: [ "CMD-SHELL", "sleep 30 && /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P 'Facil123!@#' -Q 'SELECT 1' || exit 1" ]
+      #   interval: 10s
+      #   retries: 5
+      #   start_period: 30s
+      networks:
+      - app_network
     api:
+      container_name: template-api
       build:
         context: .
         target: run
@@ -8,6 +23,19 @@ services:
           VERSION_PREFIX: 1.0.0.0
           VERSION_SUFFIX: docker
       ports:
-          - "8080:80"
+          - "8081:80"
       environment:
         DOTNET_ENVIRONMENT: docker
+        DOTNET_SYSTEM_GLOBALIZATION_INVARIANT: false
+        ConnectionStrings__DefaultConnection: "Server=sqlserver,1433;Database=DbTest;Persist Security Info=False;User Id=sa;Password=Facil123.;TrustServerCertificate=True"
+      depends_on:
+        - sqlserver
+      #   sqlserver:
+      #     condition: service_healthy
+      # entrypoint: [ "sh", "-c", "sleep 10 && dotnet /app/Presentation.dll" ]
+      networks:
+        - app_network
+
+networks:
+  app_network:
+    driver: bridge

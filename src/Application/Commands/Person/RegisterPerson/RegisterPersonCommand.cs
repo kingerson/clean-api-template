@@ -1,8 +1,7 @@
 namespace MsClean.Application;
-using System;
 using MediatR;
 
-public class RegisterPersonCommand : IRequest<Guid>
+public class RegisterPersonCommand : IRequest<int>
 {
     public string Name { get; set; }
     public string LastName { get; set; }

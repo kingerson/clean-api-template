@@ -3,7 +3,7 @@ using System;
 
 public abstract class Entity
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
     public string UserRegister { get; set; }
     public string? UserUpdated { get; set; }
     public DateTime? DateTimeUpdated { get; set; }

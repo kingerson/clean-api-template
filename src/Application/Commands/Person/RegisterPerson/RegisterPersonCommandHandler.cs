@@ -6,7 +6,7 @@ using MediatR;
 using MsClean.Domain;
 using MsClean.Infrastructure;
 
-public class RegisterPersonCommandHandler : IRequestHandler<RegisterPersonCommand, Guid>
+public class RegisterPersonCommandHandler : IRequestHandler<RegisterPersonCommand, int>
 {
     private readonly IUnitOfWork _unitOfWork;
     private readonly IExecutionStrategyWrapper _executionStrategyWrapper;
@@ -17,7 +17,7 @@ public class RegisterPersonCommandHandler : IRequestHandler<RegisterPersonComman
         _executionStrategyWrapper = executionStrategyWrapper ?? throw new ArgumentNullException(nameof(executionStrategyWrapper));
     }
 
-    public async Task<Guid> Handle(RegisterPersonCommand request, CancellationToken cancellationToken)
+    public async Task<int> Handle(RegisterPersonCommand request, CancellationToken cancellationToken)
     {
         var person = new Person();
         person.Register(request.Name, request.LastName, request.Email);

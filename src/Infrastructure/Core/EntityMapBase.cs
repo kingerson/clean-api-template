@@ -8,6 +8,7 @@ public abstract class EntityMapBase<T> : IEntityTypeConfiguration<T> where T : E
     void IEntityTypeConfiguration<T>.Configure(EntityTypeBuilder<T> builder)
     {
         builder.HasKey(b => b.Id);
+        builder.Property(b => b.Id).UseIdentityColumn();
         builder.Property(b => b.UserRegister).HasMaxLength(100).IsRequired();
         builder.Property(b => b.UserUpdated).HasMaxLength(100).IsRequired(false);
         builder.Property(b => b.DateTimeRegister).IsRequired();

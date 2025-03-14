@@ -10,10 +10,10 @@ public static class DependencyInjection
     {
         var connectionString = configuration.GetConnectionString("ConnectionEntity");
 
-        _ = services.AddScoped<EntityInterceptor>();
+        _ = services.AddTransient<EntityInterceptor>();
 
         _ = services.AddDbContext<ApplicationDbContext>(m =>
-                m.UseMySQL(connectionString)
+                m.UseSqlServer(connectionString)
                 .EnableDetailedErrors()
                 .AddInterceptors(new EntityInterceptor())
             );

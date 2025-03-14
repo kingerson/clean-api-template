@@ -1,4 +1,5 @@
 namespace MsClean.Infrastructure;
+
 using System;
 using System.Threading.Tasks;
 

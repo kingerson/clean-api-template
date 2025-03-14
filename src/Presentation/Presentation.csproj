@@ -7,6 +7,7 @@
     <Authors>Gerson Navarro</Authors>
     <Copyright>Gerson Navarro @ 2024</Copyright>
     <ImplicitUsings>enable</ImplicitUsings>
+    <InvariantGlobalization>false</InvariantGlobalization>
     <IsPackable>false</IsPackable>
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
     <LangVersion>latest</LangVersion>
@@ -20,10 +21,6 @@
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'MsClean' " />
-
-  <ItemGroup>
-    <None Remove="Source\GovernmentEntities.txt" />
-  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.9.2" />
@@ -50,9 +47,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Source\GovernmentEntities.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
