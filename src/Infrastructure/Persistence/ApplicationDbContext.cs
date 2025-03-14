@@ -7,27 +7,38 @@ using MsClean.Domain;
 
 public class ApplicationDbContext : DbContext
 {
+    private readonly IConfiguration _configuration;
     private readonly EntityInterceptor _entityInterceptor;
     public ApplicationDbContext(
         DbContextOptions<ApplicationDbContext> options,
+        IConfiguration configuration,
         EntityInterceptor entityInterceptor
-        ) : base(options) => _entityInterceptor = entityInterceptor ?? throw new ArgumentNullException(nameof(entityInterceptor));
+        ) : base(options)
+    {
+        _configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
+        _entityInterceptor = entityInterceptor ?? throw new ArgumentNullException(nameof(entityInterceptor));
+    }
 
     public class DesignTimeDbContextFactory : IDesignTimeDbContextFactory<ApplicationDbContext>
     {
         public ApplicationDbContext CreateDbContext(string[] args)
         {
+            var configurationPath = Path.Combine(Directory.GetCurrentDirectory(), "..", "Presentation", "appsettings.json");
+
             var configuration = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile(@Directory.GetCurrentDirectory() + "/../Presentation/appsettings.json").Build();
+                                    .SetBasePath(Path.GetDirectoryName(configurationPath)!).AddJsonFile(configurationPath).Build();
+                                    
+            // var configuration = new ConfigurationBuilder()
+            //     .SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile(@Directory.GetCurrentDirectory() + "/../Presentation/appsettings.json").Build();
 
             var connectionString = configuration.GetConnectionString("DefaultConnection");
 
-            Console.WriteLine($"Connection String: {connectionString}");
             DbContextOptionsBuilder<ApplicationDbContext> builder = new();
             builder.UseSqlServer(connectionString)
                 .EnableDetailedErrors()
+                .EnableSensitiveDataLogging()
                 .AddInterceptors(new EntityInterceptor());
-            return new ApplicationDbContext(builder.Options, new EntityInterceptor());
+            return new ApplicationDbContext(builder.Options, configuration, new EntityInterceptor());
         }
     }
 
@@ -37,8 +48,12 @@ public class ApplicationDbContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.AddInterceptors(_entityInterceptor);
-        optionsBuilder.EnableSensitiveDataLogging();
+        var connectionString = _configuration.GetConnectionString("DefaultConnection");
+
+        optionsBuilder.UseSqlServer(connectionString)
+                         .EnableDetailedErrors()
+                         .EnableSensitiveDataLogging()
+                         .AddInterceptors(_entityInterceptor);
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

@@ -12,10 +12,7 @@ public static class DatabaseMigrationExtension
             var services = scope.ServiceProvider;
             try
             {
-                var config = services.GetRequiredService<IConfiguration>(); // 🔹 Se obtiene desde 'scope.ServiceProvider'
-                Console.WriteLine($"Connection String: {config.GetConnectionString("DefaultConnection")}");
-
-                var context = services.GetRequiredService<ApplicationDbContext>(); // 🔹 Se obtiene desde 'services'
+                var context = services.GetRequiredService<ApplicationDbContext>();
                 context.Database.EnsureCreated(); 
                 context.Database.Migrate();
             }

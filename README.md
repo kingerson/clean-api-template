@@ -35,5 +35,5 @@ docker-compose up --build -d
 To shut down the containers
 
 ``` bash
-docker-compose down
+docker-compose down -v
 ```

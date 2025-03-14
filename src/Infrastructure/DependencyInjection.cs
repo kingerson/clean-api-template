@@ -18,6 +18,8 @@ public static class DependencyInjection
                 .AddInterceptors(new EntityInterceptor())
             );
 
+        _ = services.AddHealthChecks().AddSqlServer(connectionString);
+
         _ = services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
         _ = services.AddScoped<IUnitOfWork, UnitOfWork>();
         _ = services.AddScoped<IMemoryCacheService, MemoryCacheService>();
